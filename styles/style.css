@@ -12,32 +12,6 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта. */
 
-@keyframes arrow {
-  from {
-    translate: -20px;
-  }
-  to {
-    translate: -16px;
-  }
-}
-
-@keyframes heart-scale {
-  from {
-    transform: scale(1);
-    transform-origin: center;
-  }
-  to {
-    transform: scale(1.5);
-    transform-origin: center;
-  }
-}
-
-@keyframes sparks {
-  to {
-    opacity: 1;
-  }
-}
-
 .page {
   color: var(--accent-color);
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
@@ -64,14 +38,14 @@
   background: var(--bg-color);
 }
 
-.heading {
+.header__logo {
   margin: min(32vi, 136px) auto 20px auto;
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
 }
 
-.subheading {
+.heading {
   font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
@@ -243,6 +217,7 @@
   border: 2px solid transparent;
   background-color: transparent;
   transition: border 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -251,82 +226,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-}
-
-/* Стили для svg-иконки сердце */
-
-.like-icon {
-  width: 39px;
-  height: 36px;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-/* При наведении */
-
-.like-icon .core {
-  fill: transparent;
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--heart-contour);
-  transition: fill 0.3s linear;
-}
-
-.like-icon .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-} 
-
-.like-icon:hover .main-body {
-  fill: var(--heart-contour);
-  transition: fill 0.3s 0.05s linear;
-} 
-
-/* Активное состояние */
-
-.like-icon:active .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s linear;
-} 
-
-/* При нажатии */
-
-.like-icon.is-liked .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s linear;
-} 
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.06s linear;
-} 
-
-.like-icon .contour {
-  transition: fill 0.1s linear;
-} 
-
-.like-icon.is-liked .heart {
-  animation: heart-scale 0.3s ease-in alternate;
-  animation-delay: 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in alternate;
-  animation-delay: 0.3s;
 }
 
 .button {
@@ -380,25 +279,20 @@
   block-size: 38px;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  margin: 54px auto 100px auto;
-}
-
 .save-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  margin: 54px auto 100px auto;
   padding: 15px 20px;
   max-inline-size: 82.5vi;
 }
 
 .save-button__icon {
-min-inline-size: 21px;
-inline-size: min(28px, calc(440px - 100vi)); /*расчет для уменьшения иконки дискеты на широком экране*/
+  min-inline-size: 21px;
+  inline-size: min(28px, calc(440px - 100vi)); /*расчет для уменьшения иконки дискеты на широком экране*/
 } 
 
 .save-dialog {
@@ -423,8 +317,12 @@ inline-size: min(28px, calc(440px - 100vi)); /*расчет для уменьш�
   inline-size: min(90.9vi, 357px);
 }
 
-.save-dialog__button {
+.save-dialog__form {
   grid-column: 1/3;
+}
+
+.save-dialog__button {
+  inline-size: 100%;
   padding: 9px 17px;
   text-transform: uppercase;
 }
