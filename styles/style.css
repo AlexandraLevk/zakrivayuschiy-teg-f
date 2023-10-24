@@ -40,13 +40,11 @@
 
 .header__logo {
   margin: min(32vi, 136px) auto 20px auto;
-  font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
 }
 
 .heading {
-  font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -62,7 +60,6 @@
 .theme-menu__button {
   position: relative;
   border: none;
-  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   background-color: transparent;
@@ -173,7 +170,6 @@
   opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font), 'Courier New', Courier, monospace;
-  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
@@ -266,9 +262,8 @@
   position: relative;
   z-index: 1;
   align-self: center;
-  color: var(--button-text);
+  color: var(--bg-color);
   font-family: var(--accent-font), 'Courier New', Courier, monospace;
-  font-weight: 400;
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -299,7 +294,6 @@
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   font-family: var(--accent-font), 'Courier New', Courier, monospace;
-  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;

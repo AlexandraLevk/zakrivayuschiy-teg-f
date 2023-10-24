@@ -12,7 +12,6 @@
     repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
     linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
   --accent-color: #000;
-  --button-text: #fff;
   --paragraph-weight: 400;
   --title-weight: 700;
 }
@@ -24,9 +23,16 @@
     repeating-linear-gradient(90deg, #000 0, #000 2px, transparent 2px, transparent 4px),
     linear-gradient(#007f0c, #004306);
   --accent-color: #00CC14;
-  --button-text: #00CC14;
   --paragraph-weight: 465;
   --title-weight: 785;
+}
+
+.theme-light .button__text {
+  color: var(--bg-color);
+}
+
+.theme-dark .button__text {
+  color: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,8 +43,11 @@
       repeating-linear-gradient(90deg, #000 0, #000 2px, transparent 2px, transparent 4px),
       linear-gradient(#007f0c, #004306);
     --accent-color: #00CC14;
-    --button-text: #00CC14;
     --paragraph-weight: 465;
     --title-weight: 785;
+  }
+
+  .button__text {
+    color: var(--accent-color);
   }
 }
